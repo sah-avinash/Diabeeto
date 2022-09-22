@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Classification</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('static/wood.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  padding: 10px 300px 10px 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 16px;
+  background-color: #d4ebf2;
+  box-shadow: 5px 5px #aaaaaa;
+  border-radius: 5px;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.predict {
+  background-color: #0000FF;
+  box-shadow: 1px 1px #aaaaaa;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+}
+
+.predict:hover {
+  opacity: 1;
+}
+
+
+</style>
+
+</head>
+<body>
+<form action = "/predict" method = "POST">
+  <div class = "content">
+    <h1>Disease classification</h1>
+    <hr>
+    <div class ="form">
+
+            <label for = "pregnancies"><b>Pregnancies</b></label><br>
+            <input type = "number" name = "pregnancies" id = "pregnancies" placeholder = "Pregnancies" required><br>
+
+            <label for = "glucose"><b>Glucose</b></label><br>
+            <input type = "number" name = "glucose" id = "glucose" placeholder = "Glucose" required><br>
+
+            <label for = "bp"><b>Blood Pressure</b></label><br>
+            <input type = "number" name = "bp" id = "bp" placeholder = "Rate" required><br>
+
+            <label for = "skin"><b>Skin Thickness</b></label><br>
+            <input type = "number" name = "skin" id = "skin" placeholder = "Skin Thickness" required><br>
+
+            <label for = "insulin"><b>Insulin</b></label><br>
+            <input type = "number" name = "insulin" id = "insulin" placeholder = "Insulin" required><br>
+
+            <label for = "bmi"><b>BMI</b></label><br>
+            <input type = "number" name = "bmi" id = "bmi" placeholder = "BMI" required><br>
+
+            <label for = "pedigree"><b>Diabetes Pedigree Function</b></label><br>
+            <input type = "number" name = "pedigree" step=0.01 id = "pedigree" placeholder = "DiabetesPedigreeFunction" required><br>
+
+            <label for = "age"><b>Age</b></label><br>
+            <input type = "number" name = "age" id = "age" placeholder = "Age" required><br>
+
+            <hr>
+
+    </div>
+  </div>
+<div>
+    <p align = "center">
+        <button type="submit" class="predict" >Predict</button>
+    </p>
+</div>
+</form>
+
+</body>
+</html>

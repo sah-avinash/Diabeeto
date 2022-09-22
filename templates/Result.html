@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Result</title>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('static/wood.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  padding: 10px 300px 10px 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 16px;
+  background-color: #d4ebf2;
+  box-shadow: 5px 5px #aaaaaa;
+  border-radius: 5px;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.prediction {
+  align: center;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  font-family: Monotype Corsiva;
+  font_size: 1;
+}
+</style>
+</head>
+
+<body>
+<div class = 'content'>
+    <h1>Diabetes Prediction Result : </h1>
+    <h2>{{pred}}</h2>
+</div>
+<div class = 'bottomright'><b>~avisah</b></div>
+</body>
+</html>
